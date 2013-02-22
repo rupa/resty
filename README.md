@@ -58,6 +58,7 @@ Usage
       source resty [-W] [remote]              # load functions into shell
       resty [-v]                              # prints current request URI base
       resty <remote> [OPTIONS]                # sets the base request URI
+      resty_deactivate                        # unload functions from shell
 
       HEAD [path] [OPTIONS]                   # HEAD request
       OPTIONS [path] [OPTIONS]                # OPTIONS request

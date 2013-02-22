@@ -145,6 +145,11 @@ function TRACE() {
   resty TRACE "$@"
 }
 
+function resty_deactivate() {
+  unset -v _resty_host _resty_path _resty_nohistory
+  unset -f HEAD OPTIONS GET POST PUT DELETE TRACE resty unload_resty
+}
+
 [ "$1" = "-W" ] && export _resty_nohistory="/dev/null" && [[ $# > 0 ]] && shift
 
 resty "$@" >/dev/null 2>&1
